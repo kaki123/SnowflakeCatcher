@@ -2,7 +2,7 @@ Snowflake [] flakes;
 
 void setup()
 {
-  size(300,300);
+  size(800,800);
   background(0,0,0);
   flakes = new Snowflake[500];
   for(int i=0 ; i<flakes.length; i++){
@@ -44,8 +44,8 @@ class Snowflake
   boolean isMoving;
 
   Snowflake(){
-    x= (int)(Math.random()*300);
-    y = (int)(Math.random()*296);
+    x= (int)(Math.random()*800);
+    y = (int)(Math.random()*800);
     isMoving = true;
     c= (int)(Math.random()*255)+30;
   }
@@ -57,7 +57,7 @@ class Snowflake
   }
   void lookDown()
   {
-    if(y>0 && y<300 && (get(x,y+4)!= color (0,0,0)))
+    if(y>0 && y<800 && (get(x,y+4)!= color (0,0,0)))
       isMoving = false;
     else  
       isMoving= true;  
@@ -74,9 +74,9 @@ class Snowflake
   }
   void wrap()
   {
-    if(y>280){
+    if(y>780){
       y=0;
-      x=(int)(Math.random()*300);
+      x=(int)(Math.random()*800);
     }
   }
 }
